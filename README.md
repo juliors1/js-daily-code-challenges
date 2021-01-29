@@ -18,7 +18,7 @@ To provide additional practice writing JavaScript functions to solve a specific 
 
 These code challenges are considered a deliverable which is due on the last day of the course, on par with that of a unit project, and thus you must complete them to receive a Certificate of Completion.
 
-Challenges are considered complete when the Jasmine tests return as passing for all thirty challenges. 
+Challenges are considered complete when the Jasmine tests return as passing for all thirty challenges.
 
 You may choose to do more than one per day, or none at all - don't fall too far behind though!
 
@@ -33,7 +33,7 @@ You may choose to do more than one per day, or none at all - don't fall too far 
 
 ## Instructions
 
-- All challenges have one or more tests that run when the `run-tests-by-opening-in-browser.html` file is opened in the browser. 
+- All challenges have one or more tests that run when the `run-tests-by-opening-in-browser.html` file is opened in the browser.
 
 - By default, Jasmine (the testing framework) will run the tests in random order. To prevent this, click on the Options button near the top-right of the page and uncheck the run tests in random order checkbox.
 
@@ -50,7 +50,3 @@ You may choose to do more than one per day, or none at all - don't fall too far 
 ## Committing and Pushing your Work
 
 - As you solve the challenges, commit your work, and `git push origin main`. This pushes the updates to your fork. This way, if something happens to your machine throughout the course, you won't lose your progress.
-# js-daily-code-challenges
-# js-daily-code-challenges
-# js-daily-code-challenges
-# js-daily-code-challenges
