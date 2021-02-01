@@ -295,7 +295,7 @@ function formatWithPadding(int, char, length) {
   }
   return result;
 }
-console.log(formatWithPadding(125,'e', 5));
+// console.log(formatWithPadding(125,'e', 5));
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -316,7 +316,18 @@ isPalindrome('A nut for a jar of tuna'); //=> true
 isPalindrome(''); //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
+function isPalindrome(str) {
+// Lowercase the string and use the RegExp to remove unwanted characters from it
+const regExp = /[\W_]/g;
+// removes spaces and casing
+const lowRegStr = str.toLowerCase().replace(regExp, '');
+// reverse a string
+const reverseStr = lowRegStr.split('').reverse().join('');
+// Check if reverseStr strictly equals to lowRegStr and return a Boolean
+return reverseStr === lowRegStr;
 
+}
+// console.log(isPalindrome('5'))
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
 
@@ -750,7 +761,26 @@ gridTrip( [10, 5], 'D5L15U2' ) //-> [-5, 2]
 gridTrip( [100, -22], 'L2L15D50U1D9') //=> [83, -80]
 -----------------------------------------------------------------------------*/
 // Your solution for 28-gridTrip here:
-
+function gridTrip(xyArr, moves) {
+  // create result array with starting positions
+  var result = [xyArr[0], xyArr[1]];
+  // lookup object for result arr index and multipler for each dir char
+  const lookup = { U: [0, 1], R: [1, 1], D: [0, -1], L: [1, -1] };
+  var idx = 0;
+  while (idx < moves.length) {
+    // first char of the move string is the direction to be used to access the lookup object
+    var dir = moves[idx];
+    idx++;
+    var numString = "";
+    while ("0123456789".includes(moves[idx]) && idx < moves.length) {
+      numString += moves[idx];
+      idx++;
+    }
+    result[lookup[dir][0]] += numString * lookup[dir][1];
+  }
+  return result;
+}
+// console.log(gridTrip([5, 10], 'D5L15U2' ));
 /*-----------------------------------------------------------------------------
 Challenge: 29-addChecker
 

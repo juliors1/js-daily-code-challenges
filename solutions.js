@@ -1133,7 +1133,6 @@ function gridTrip(xyArr, moves) {
   }
   return result;
 }
-
 /*--- Using regular expressions to break up the moves into an array ---*/
 // function gridTrip(xyArr, moves) {
 //   var result = [xyArr[0], xyArr[1]];
